@@ -15,11 +15,10 @@ public class Dawkins {
     public Dawkins() {
         String random28CharString = get28CharString();
         Pair<String, Integer> bestMatch = findBestMatch(random28CharString);
-        while (!bestMatch.getKey().equals(EXPECTED_STRING)) {
-            System.out.printf("Best Matched String: %s, score: %d \n", bestMatch.getKey(), bestMatch.getValue());
+        while(!bestMatch.getKey().equals(EXPECTED_STRING)) {
             bestMatch = findBestMatch(bestMatch.getKey());
+        System.out.printf("Best Matched String: %s, score: %d \n", bestMatch.getKey(), bestMatch.getValue());
         }
-            System.out.println("Done!!!");
     }
 
     private Pair<String, Integer> findBestMatch(String random28CharString) {
