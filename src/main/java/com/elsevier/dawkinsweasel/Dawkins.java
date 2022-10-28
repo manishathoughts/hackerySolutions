@@ -30,6 +30,7 @@ public class Dawkins {
             String mutatedWord = mutateWordWhen5pcChance(copy);
             int score = countMatchingCharacters(mutatedWord);
             if (score > bestMatchedScore) {
+                bestMatchedScore = score;
                 bestMatch = new Pair<>(mutatedWord, bestMatchedScore);
             }
         }
